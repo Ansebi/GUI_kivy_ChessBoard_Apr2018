@@ -11,7 +11,7 @@ from kivy.core.audio import SoundLoader
 
 my_graphics_settings_width = 700  # THE WIDTH
 my_graphics_settings_height = 700  # THE HEIGHT
-number_of_stones = 8  # NUMBER OF STONES
+number_of_stones = 16  # NUMBER OF STONES
 number_of_stones = number_of_stones + 1
 do_scale_switch = False  # RESIZING STONES
 do_rotation_switch = False  # TURNING STONES
