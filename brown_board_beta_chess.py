@@ -29,7 +29,7 @@ Window.left = 200
 stone_size = (stone_size_hint * Window.height, stone_size_hint * Window.height)
 # stone_colors=['bl','wh','rd']
 stone_colors = ['bl', 'wh']
-chess_pieces = ['king', 'queen', 'rook', 'bishop', 'horse', 'pawn']
+chess_pieces = ['king', 'queen', 'rook', 'bishop', 'horse', 'pawn', 'stone']
 
 stone_counter = -1
 for chess_piece in chess_pieces:
@@ -41,11 +41,11 @@ for chess_piece in chess_pieces:
     for stone_n in range(number_of_stones):
         exec("""bl_%s_sctr%d=Scatter(
         size_hint=(stone_size_hint,stone_size_hint),
-        pos=(bl_%s_default_pos),auto_bring_to_front=False, do_scale=do_scale_switch,
+        pos=(bl_%s_default_pos),auto_bring_to_front=True, do_scale=do_scale_switch,
         do_rotation=do_rotation_switch)""" % (chess_piece, stone_n, chess_piece))
         exec("""wh_%s_sctr%d=Scatter(
         size_hint=(stone_size_hint,stone_size_hint),
-        pos=(wh_%s_default_pos),auto_bring_to_front=False, do_scale=do_scale_switch,
+        pos=(wh_%s_default_pos),auto_bring_to_front=True, do_scale=do_scale_switch,
         do_rotation=do_rotation_switch)""" % (chess_piece, stone_n, chess_piece))
 
 # creating stone labels and images:
